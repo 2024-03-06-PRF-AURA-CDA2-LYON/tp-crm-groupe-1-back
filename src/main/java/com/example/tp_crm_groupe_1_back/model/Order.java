@@ -38,10 +38,4 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "customer_id" ,nullable = true)
     private Customer  customer;
-
-
-
-
-
-
 }

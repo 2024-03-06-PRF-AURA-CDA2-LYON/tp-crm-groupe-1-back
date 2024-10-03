@@ -7,12 +7,8 @@ public enum CustomerOrderState {
     ACTIVE(0),
     INACTIVE(1);
 
-    private int value;
+    private final int value;
     CustomerOrderState(int value) {
         this.value = value;
-    }
-
-    public int getValue() {
-        return value;
     }
 }

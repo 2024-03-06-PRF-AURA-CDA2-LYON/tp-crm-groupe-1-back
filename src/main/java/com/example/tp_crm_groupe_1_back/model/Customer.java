@@ -1,6 +1,5 @@
 package com.example.tp_crm_groupe_1_back.model;
 
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -45,9 +44,10 @@ public class Customer {
     private String city;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "STATE")
-    private OrderState state;
+    @Column(name = "STATE", nullable = false)
+    private CustomerOrderState state;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Order> oders;
+    @Column(name = "ORDERS_ID")
+    private List<Order> orders;
 }
