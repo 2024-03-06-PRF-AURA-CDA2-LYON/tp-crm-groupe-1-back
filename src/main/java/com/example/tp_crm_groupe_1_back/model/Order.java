@@ -36,7 +36,7 @@ public class Order {
     private String comment;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id" ,nullable = false)
+    @JoinColumn(name = "customer_id" ,nullable = true)
     private Customer  customer;
 
 
