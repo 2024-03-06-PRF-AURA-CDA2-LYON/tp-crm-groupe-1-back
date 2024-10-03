@@ -56,7 +56,7 @@ public class OrderController {
 
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Order> deleteorder(@PathVariable Long id) {
+    public ResponseEntity<Order> deleteOrder(@PathVariable Long id) {
         Optional<Order> order = orderRepository.findById(id);
         if (order.isPresent()) {
             orderRepository.delete(order.get());
