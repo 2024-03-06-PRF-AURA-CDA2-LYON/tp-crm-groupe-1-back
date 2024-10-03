@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -17,8 +16,8 @@ public class CustomerController {
     private CustomerRepository customerRepository;
 
     @GetMapping
-    public List<Customer> getAllCustomers() {
-        return (List<Customer>) customerRepository.findAll();
+    public Iterable<Customer> getAllCustomers() {
+        return customerRepository.findAll();
     }
 
     @GetMapping("/{id}")
