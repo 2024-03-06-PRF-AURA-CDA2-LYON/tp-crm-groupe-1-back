@@ -49,5 +49,6 @@ public class Customer {
     private OrderState state;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Column(name = "orders", nullable = true)
     private List<Order> oders;
 }
