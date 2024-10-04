@@ -62,6 +62,4 @@ public class CustomerController {
         }
         return ResponseEntity.notFound().build();
     }
-
-
 }
